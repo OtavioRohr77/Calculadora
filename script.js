@@ -1,5 +1,3 @@
-// script.js
-
 let visor = document.getElementById('visor');
 let currentInput = '';
 let currentOperator = '';
@@ -17,7 +15,7 @@ function clear() {
 }
 
 function appendNumber(number) {
-    // Impede que comece com múltiplos zeros
+
     if (currentInput === '0' && number !== '.') {
         currentInput = number;
     } else {
@@ -70,7 +68,7 @@ function calculate() {
     updateVisor(currentInput);
 }
 
-// Atribuindo funções aos botões
+
 document.querySelectorAll('.numero').forEach(button => {
     button.addEventListener('click', () => appendNumber(button.textContent));
 });
